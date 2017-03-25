@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`editable-name-tag`
+editable name tag
+
+@demo demo/index.html
+-->
+
+<dom-module id="editable-name-tag">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    class MyElement extends Polymer.Element {
+      static get is() { return 'editable-name-tag'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'editable-name-tag'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyElement.is, MyElement);
+  </script>
+</dom-module>
