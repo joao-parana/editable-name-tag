@@ -12,24 +12,33 @@ editable name tag
     <style>
       :host {
         display: block;
+        padding: 10px;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <!-- bind to the "owner" property -->
+    <p>This is <b>[[owner]]</b>'s name-tag element.</p>
+    
+    <!-- iron-input exposes a two-way bindable input value -->
+    <iron-input bind-value="{{owner}}">
+      <input is="iron-input" placeholder="Your name here...">
+    </iron-input>
   </template>
 
   <script>
-    class MyElement extends Polymer.Element {
-      static get is() { return 'editable-name-tag'; }
+    class EditableNameTag extends Polymer.Element {
+      static get is() { return "editable-name-tag"; }
+      
+      // configure the owner property
       static get properties() {
         return {
-          prop1: {
+          owner: {
             type: String,
-            value: 'editable-name-tag'
+            value: 'Daniel'
           }
         };
       }
+      
     }
-
-    window.customElements.define(MyElement.is, MyElement);
+    customElements.define(EditableNameTag.is, EditableNameTag);
   </script>
 </dom-module>
