@@ -3,7 +3,8 @@
   "description": "editable name tag",
   "main": "editable-name-tag.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0-rc.2"
+    "polymer": "Polymer/polymer#^2.0.0-rc.2",
+    "iron-input": "joao-parana/iron-input#2.0-preview"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",

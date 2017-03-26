@@ -1,9 +1,9 @@
-<link rel="import"  href="https://polygit.org/polymer+2.0.0-rc.3/iron-input+polymerelements+:2.0-preview/shadycss+webcomponents+1.0.0-rc.2/components/polymer/polymer-element.html">
+<!-- link rel="import"  href="https://polygit.org/polymer+2.0.0-rc.3/iron-input+polymerelements+:2.0-preview/shadycss+webcomponents+1.0.0-rc.2/components/polymer/polymer-element.html">
 <!-- import the iron-input element -->
-<link rel="import"  href="https://polygit.org/polymer+2.0.0-rc.3/iron-input+polymerelements+:2.0-preview/shadycss+webcomponents+1.0.0-rc.2/components/iron-input/iron-input.html">
+<!-- link rel="import"  href="https://polygit.org/polymer+2.0.0-rc.3/iron-input+polymerelements+:2.0-preview/shadycss+webcomponents+1.0.0-rc.2/components/iron-input/iron-input.html"   -->
 
-<!--link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-input/iron-input.html" -->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-input/iron-input.html">
 
 <!--
 `editable-name-tag`
@@ -25,7 +25,7 @@ editable name tag
     
     <!-- iron-input exposes a two-way bindable input value -->
     <iron-input bind-value="{{owner}}">
-      <input is="iron-input" placeholder="Your name here...">
+      <input is="iron-input" placeholder="Your name here..." prevent-invalid-input allowed-pattern="[A-z]">
     </iron-input>
   </template>
 
